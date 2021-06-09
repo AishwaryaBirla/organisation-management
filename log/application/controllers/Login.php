@@ -21,23 +21,19 @@ class Login extends CI_Controller {
 			$name  = $data['username'];
 			$email = $data['email'];
 			$level = $data['level'];
-			$fname = $data['fname'];
-			$lname = $data['lname'];
-			$dob = $data['dob'];
-			$add = $data['address'];
 			$sesdata = array(
 				'username'  => $username,
-				'email'	=> $email,
-				'level' => $level,
-				'fname' => $fname,
-				'lname' => $lname,
-				'dob' => $dob,
-				'address' => $add,
+				'email'			=> $email,
+				'level'     => $level,
 				'logged_in' => TRUE
 			);
 			$this->session->set_userdata($sesdata);
-			if($this->session->userdata('logged_in'))
-				{redirect('Admin');
+			if($level === '1') {
+				redirect('Admin');
+			} elseif($level === '2') {
+				redirect('Project_Leader');
+			} else {
+				redirect('Staff');
 			}
 		} else {
 			echo "<script>alert('access denied');history.go(-1);</script>";

@@ -6,20 +6,20 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="<?php echo site_url('Admin');?>">Home</a>
+  <a class="navbar-brand" href="#">Navbar </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url('Admin');?>">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('Admin');?>">Home</a>
+        <a class="nav-link" href="#">Features</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('Admin');?>">Home</a>
+        <a class="nav-link" href="#">Pricing</a>
       </li>
     </ul>
     <span class="navbar-text">
@@ -30,11 +30,11 @@
 
 <div class="jumbotron">
   <h1 class="display-4">Hello, <?php echo $this->session->userdata('username');?>!</h1>
-  <p class="lead">You are logged in as an <?php echo $this->session->userdata('fname');?> <?php echo $this->session->userdata('lname');?></p>
+  <p class="lead">You are logged in as an admin</p>
   <hr class="my-4">
   <p></p>
   
-  <a class="btn btn-primary btn-lg" href="<?php echo site_url('Profile');?>" role="button">Profile</a>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Profile</a>
   <a class="btn btn-primary btn-lg" href="<?php echo site_url('Tasks');?>" role="button">Tasks</a>
 </div>
 </body>

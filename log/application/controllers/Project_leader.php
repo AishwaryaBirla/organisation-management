@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Tasks extends CI_Controller {
+class Project_Leader extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		if($this->session->userdata('logged_in') !== TRUE) {
@@ -9,9 +9,12 @@ class Tasks extends CI_Controller {
 		}
 	}
 
-	function index()
-	{
-		$this->load->view('task_view');
-
+	function index() {
+		if($this->session->userdata('level')==='2') {
+			$this->load->view('projleader_view');
+		} else {
+			echo "Access Denied!";
+		}
 	}
+
 }

@@ -10,9 +10,10 @@ class Admin extends CI_Controller {
 	}
 
 	function index() {
-		
+		if($this->session->userdata('level')==='1') {
 			$this->load->view('admin_view');
-			
-		
+		} else {
+			echo "Access Denied!";
+		}
 	}
 }

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Add_model extends CI_Model {
 
-	/*function check_user() {
+	function check_user($username, $password) {
 		$this->db->select('*'); 
 		$this->db->from('task'); 
 		$this->db->where('ass_by', $ass_by);
@@ -16,22 +16,6 @@ class Add_model extends CI_Model {
 		
 		$query = $this->db->get(); 
 		return $query;
-	}*/
-	function insert_data($data) {
-		
-		$this->db->insert("task",$data); 
-		  
 	}
-	function fetch_data()
-	{
 
-		$query =$this->db->get("user_tb");
-		return $query;
-	}
-	function fetch_info()
-	{
-		$query=$this->db->get("task");
-		return $query;
-
-	}
 }

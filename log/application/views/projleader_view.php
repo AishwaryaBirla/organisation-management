@@ -30,10 +30,10 @@
 
 <div class="jumbotron">
   <h1 class="display-4">Hello, <?php echo $this->session->userdata('username');?>!</h1>
-  <p class="lead">You are logged in as an admin</p>
+  <p class="lead">You are logged in as a project leader.</p>
   <hr class="my-4">
   <p></p>
-  <a class="btn btn-primary btn-lg" href="<?php echo site_url('Add');?>" role="button">Add</a>
+  <a class="btn btn-primary btn-lg" href="#" role="button">profile</a>
 </div>
 </body>
 </html>
